@@ -3,46 +3,111 @@ main
     display: flex;
 }
 
-#cookieDiv
+#heartDiv
 {
-    background-color: rgb(247, 169, 231);
+    background-color: #310307;
     width: 50%;
     height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#heartDiv #labelQuantity, 
+#heartDiv #labelPerSec,
+#heartDiv #labelPerClick
+{
+    width: 60%;
+    margin: 10px;
+    height: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #826777;
+}
+
+#heartDiv #heart
+{
+    background-image: url("serce.png");
+    width: 465px;
+    height: 537px;
+    animation: beating 2s ease infinite;
+    margin-top: -20px;
+}
+
+#mods
+{
+    background-color: #310307;
+    width: 50%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mods div 
+{
+    width: 90%;
+    height: 100px;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-#mods
+#mods div div
 {
-    background-color: rgb(255, 77, 219);
-    width: 50%;
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 23%;   
+    height: 50px;
+    margin: 8px;
+    background-color: rgba(69, 32, 46, 0.5);
+    color: #826777;
+    font-weight: bold;
+    border-radius: 8px;
 }
 
-#cookie
+#mods button
 {
-    background-color:  #ffcc99;
-    border-color: #b35900;
-    width: 350px;
-    height: 350px;
-    border-radius: 1000px;
-
-    font-size: 35px;
-    color: #b35900;
+    background-color: #200206;
+    width: 45%;   
+    height: 50px;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: rgba(121, 7, 7, 0.5);
 }
+
+#mods button:hover
+{
+    background-color: rgba(187, 11, 12, 0.5);
+}
+
+
+@keyframes beating
+{
+  0% 
+  {
+    transform: scale(0.87);
+  }
+  50% 
+  {
+    transform: scale(0.94);
+  }
+  100% 
+  {
+    transform: scale(0.87);
+  }
+}
+
 
 .modButton
 {
     display: flex;
-    width: 300px;
-    height: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 20px;
+    height: 20px;
+
     margin-top: 15px;
     margin-bottom: 15px;
     background-color: gray;
@@ -51,3 +116,29 @@ main
     padding: 12px;
     font-size: 20px;
 }
+
+.modButton:hover
+{
+    transform: scale(1.02);
+}
+
+.blood
+{
+    position: fixed;
+    top: 65vh;
+    left: 27vw;
+    animation: fall 3s ease-in 1;
+}
+
+@keyframes fall 
+{
+    to
+    {
+        transform: translateY(100vh);
+    }
+}
+
+
+
+
+
